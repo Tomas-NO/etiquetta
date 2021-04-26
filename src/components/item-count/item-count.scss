@@ -1,0 +1,35 @@
+.item-count {
+  width: 80%;
+  margin: 0 auto;
+  .item-count-controls {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    border: 1px solid rgb(145, 145, 145);
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: white;
+    p {
+      margin: 0;
+    }
+    .control {
+      color: blue;
+      font-size: 2rem;
+    }
+    .control:hover {
+      cursor: pointer;
+    }
+  }
+  .item-count-button {
+    width: 100%;
+    margin-top: 1rem;
+    background-color: white;
+    border: 1px solid rgb(145, 145, 145);
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+  .item-count-button:hover {
+    background-color: red;
+    cursor: pointer;
+  }
+}
