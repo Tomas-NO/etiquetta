@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "remera 1",
+    "price": 1000,
+    "description": "Es una remera buenísima",
+    "category": "remeras",
+    "colors": ["white", "black", "blue"],
+    "images": ["./img/products/1/color1.jpg", "./img/products/1/color2.jpg"]
+  },
+  {
+    "id": 1,
+    "title": "remera 2",
+    "price": 1000,
+    "description": "Es una remera buenísima",
+    "category": "remeras",
+    "colors": ["white", "black", "blue"],
+    "images": [
+      "./img/products/2/color1.jpg",
+      "./img/products/2/color2.jpg",
+      "./img/products/2/color3.jpg"
+    ]
+  },
+  {
+    "id": 1,
+    "title": "remera 3",
+    "price": 1000,
+    "description": "Es una remera buenísima",
+    "category": "remeras",
+    "colors": ["white", "black", "blue"],
+    "images": ["./img/products/3/color1.png"]
+  },
+  {
+    "id": 1,
+    "title": "remera 4",
+    "price": 1000,
+    "description": "Es una remera buenísima",
+    "category": "remeras",
+    "colors": ["white", "black", "blue"],
+    "images": ["./img/products/4/color1.png"]
+  }
+]

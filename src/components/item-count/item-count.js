@@ -9,10 +9,10 @@ export const ItemCount = (props) => {
   const [initial, setInitial] = useState(props.initial);
 
   function stock_control(id) {
-    if (id == "plus-control" && stock > 0) {
+    if (id === "plus-control" && stock > 0) {
       setInitial(parseInt(initial) + 1);
       setStock(parseInt(stock) - 1);
-    } else if (id == "minus-control" && initial > 0) {
+    } else if (id === "minus-control" && initial > 0) {
       setInitial(parseInt(initial) - 1);
       setStock(parseInt(stock) + 1);
     }
@@ -22,14 +22,14 @@ export const ItemCount = (props) => {
     <div className="item-count">
       <div className="item-count-controls">
         <FontAwesomeIcon
-          className="control"
+          className="item-count-control"
           id="minus-control"
           icon={faMinus}
           onClick={(e) => stock_control(e.target.parentElement.id)}
         />
         <p>{initial}</p>
         <FontAwesomeIcon
-          className="control"
+          className="item-count-control"
           id="plus-control"
           icon={faPlus}
           onClick={(e) => stock_control(e.target.parentElement.id)}
