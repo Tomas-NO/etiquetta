@@ -1,0 +1,19 @@
+.item-detail-images {
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+  .item-detail-images-selection {
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 10rem;
+      margin-top: 2rem;
+    }
+  }
+  .item-detail-selected-image {
+    img {
+      width: 60rem;
+    }
+  }
+}
