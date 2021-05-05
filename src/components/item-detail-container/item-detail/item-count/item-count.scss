@@ -10,9 +10,9 @@
     background-color: white;
     p {
       margin: 0;
+      font-size: 2rem;
     }
     .item-count-control {
-      color: blue;
       font-size: 2rem;
     }
     .item-count-control:hover {
@@ -21,14 +21,16 @@
   }
   .item-count-button {
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 2rem;
     background-color: white;
     border: 1px solid rgb(145, 145, 145);
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
   }
   .item-count-button:hover {
-    background-color: red;
     cursor: pointer;
+    border: 1px solid black;
   }
 }

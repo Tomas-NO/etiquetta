@@ -17,6 +17,9 @@ $titles-font: "Noto Sans KR", sans-serif;
 $text-font: "Abel", sans-serif;
 
 /* GENERALES */
+body {
+  user-select: none;
+}
 h1,
 h2,
 h3 {

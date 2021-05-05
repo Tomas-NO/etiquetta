@@ -1,4 +1,6 @@
 import "./search.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 export const Search = (props) => {
   //   const [filteredProducts, setFilteredProducts] = useState(products);
@@ -13,12 +15,14 @@ export const Search = (props) => {
   //   }, [filter]);
 
   return (
-    <input
-      className="search"
-      type="text"
-      placeholder="Buscar"
-      //   value={filter}
-      //   onChange={(e) => setFilter(e.target.value)}
-    />
+    <FontAwesomeIcon icon={faSearch} />
+
+    // <input
+    //   className="search"
+    //   type="text"
+    //   placeholder="Buscar"
+    //   //   value={filter}
+    //   //   onChange={(e) => setFilter(e.target.value)}
+    // />
   );
 };

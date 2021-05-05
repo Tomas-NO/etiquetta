@@ -6,7 +6,7 @@ export const ItemListContainer = () => {
   const { categoryId } = useParams();
 
   return (
-    <div className="abcd">
+    <div className="item-list-container">
       {categoryId ? (
         <img
           src={`../img/categories/${categoryId}.jpg`}
@@ -14,7 +14,11 @@ export const ItemListContainer = () => {
           className="category-img"
         />
       ) : (
-        <h2>Productos</h2>
+        <img
+          src={`../img/categories/productos.jpg`}
+          alt="category-img"
+          className="category-img"
+        />
       )}
 
       <ItemList categoryId={categoryId} />

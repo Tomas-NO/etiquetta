@@ -1,4 +1,5 @@
 import "./App.scss";
+import { PromotionMsj } from "./components/promotion-msj/promotion-msj";
 import { NavBar } from "./components/navbar/navbar";
 import { Footer } from "./components/footer/footer";
 import { HomePage } from "./pages/home";
@@ -10,6 +11,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 function App() {
   return (
     <BrowserRouter>
+      <PromotionMsj />
       <NavBar />
       <Switch>
         <Route exact path="/" component={HomePage}></Route>

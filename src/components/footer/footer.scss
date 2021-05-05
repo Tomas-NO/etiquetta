@@ -1,0 +1,118 @@
+.footer {
+  margin-top: 5rem;
+  .newsletter {
+    background-color: #e1e1e1;
+    padding: 3rem 0;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    .newsletter-title {
+      font-size: 2rem;
+      font-weight: normal;
+      margin: 0;
+      span {
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+    .newsletter-text {
+      font-size: 1.5rem;
+    }
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      width: 20%;
+      .newsletter-form-input,
+      .newsletter-form-button {
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border: 1px solid black;
+        border-radius: 0.5rem;
+      }
+      .newsletter-form-button {
+        font-size: 1.6rem;
+        letter-spacing: 0.1rem;
+        background-color: #000000;
+        color: #ffffff;
+      }
+      .newsletter-form-button:hover {
+        cursor: pointer;
+        opacity: 0.8;
+        transition: opacity 0.5s ease;
+      }
+    }
+  }
+  .container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    h3 {
+      text-align: center;
+      font-size: 2rem;
+      letter-spacing: 0.1rem;
+    }
+    .footer-navigation {
+      width: 25rem;
+      .footer-links-list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 0;
+        max-height: 15rem;
+        .footer-links-link {
+          list-style: none;
+          margin-bottom: 2rem;
+          text-align: center;
+          .footer-link {
+            color: #000000;
+            letter-spacing: 0.2rem;
+          }
+          .footer-link:hover {
+            text-decoration: underline black;
+          }
+        }
+      }
+    }
+    .footer-social-media {
+      .social-media {
+        display: flex;
+        justify-content: space-around;
+        .social-media-icon {
+          font-size: 3rem;
+          color: #000000;
+        }
+        .social-media-icon:hover {
+          opacity: 0.8;
+          transition: opacity 0.5s ease;
+        }
+      }
+    }
+  }
+  .footer-copyright {
+    display: inline-block;
+    width: 100%;
+    padding: 2rem;
+    .copyright {
+      display: flex;
+      justify-content: center;
+      .copyright-logo {
+        height: 3rem;
+      }
+      .copyright-text {
+        font-size: 1.3rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+  .footer-copyright::before {
+    content: "";
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #e1e1e1e1;
+    display: block;
+    height: 0.1rem;
+    margin-bottom: 2rem;
+  }
+}

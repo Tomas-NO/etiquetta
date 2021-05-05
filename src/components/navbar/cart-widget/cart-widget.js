@@ -2,13 +2,15 @@ import "./cart-widget.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
-export const CartWidget = ({ cartQuantity }) => {
+export const CartWidget = () => {
   return (
-    <span className="cart">
-      <div className="cart-icon">
-        <FontAwesomeIcon icon={faShoppingCart} />
-      </div>
-      <p className="cart-quantity">{cartQuantity}</p>
-    </span>
+    <FontAwesomeIcon icon={faShoppingCart} />
+
+    // <span className="cart">
+    //   <div className="cart-icon">
+    //     <FontAwesomeIcon icon={faShoppingCart} />
+    //   </div>
+    //   <p className="cart-quantity">{cartQuantity}</p>
+    // </span>
   );
 };
