@@ -27,7 +27,7 @@ export const ItemCount = (props) => {
           icon={faMinus}
           onClick={(e) => stock_control(e.target.parentElement.id)}
         />
-        <p>{initial}</p>
+        <p id="item-count-stock">{initial}</p>
         <FontAwesomeIcon
           className="item-count-control"
           id="plus-control"
@@ -35,7 +35,9 @@ export const ItemCount = (props) => {
           onClick={(e) => stock_control(e.target.parentElement.id)}
         />
       </div>
-      <button className="item-count-button">Agregar al carrito</button>
+      <button className="item-count-button" onClick={props.onAdd}>
+        Agregar al carrito
+      </button>
     </div>
   );
 };

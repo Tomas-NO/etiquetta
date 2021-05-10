@@ -1,6 +1,8 @@
 import "./item-detail.scss";
 import { ItemDetailImages } from "./item-detail-images/item-detail-images";
 import { ItemCount } from "./item-count/item-count";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const ItemDetail = ({
   images,
@@ -10,6 +12,15 @@ export const ItemDetail = ({
   colors,
   stock,
 }) => {
+  const [purchasedStock, setPurchasedStock] = useState(0);
+
+  function onAdd() {
+    let purchase_stock = document.getElementById("item-count-stock").innerHTML;
+    if (parseInt(purchase_stock) !== 0) {
+      setPurchasedStock(purchase_stock);
+    }
+  }
+
   return (
     <div className="item-detail">
       <ItemDetailImages images={images} />
@@ -21,7 +32,11 @@ export const ItemDetail = ({
           <p key={i}>COLOR: {color}</p>
         ))}
         {/* PONER LOS TALLES */}
-        <ItemCount stock={stock} initial="0" />
+        {purchasedStock > 0 ? (
+          <Link to={`/cart`}>Terminar mi compra</Link>
+        ) : (
+          <ItemCount stock={stock} initial="0" onAdd={onAdd} />
+        )}
       </div>
     </div>
   );

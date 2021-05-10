@@ -12,7 +12,7 @@ export const ItemDetailContainer = () => {
   useEffect(() => {
     setTimeout(() => {
       const getItem = new Promise((resolve, reject) => {
-        resolve(products.find((product) => product.id == itemId));
+        resolve(products.find((product) => product.id === parseInt(itemId)));
       });
       getItem.then((result) => {
         setItem(result);

@@ -14,8 +14,29 @@ export const Search = (props) => {
   //     setFilteredProducts(newFilteredProducts);
   //   }, [filter]);
 
+  function show_search() {
+    document
+      .getElementById("search-item")
+      .setAttribute("style", "display:block;");
+  }
+
+  function filter_items(key) {
+    if (key === "Enter") {
+      console.log("Pulsó ENTER");
+    }
+  }
+
   return (
-    <FontAwesomeIcon icon={faSearch} />
+    <div className="search-container">
+      <input
+        type="text"
+        placeholder="Buscar"
+        className="search-item"
+        id="search-item"
+        onKeyPress={(e) => filter_items(e.key)}
+      />
+      <FontAwesomeIcon icon={faSearch} onClick={show_search} />
+    </div>
 
     // <input
     //   className="search"

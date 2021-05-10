@@ -9,10 +9,12 @@ export const ItemList = ({ categoryId }) => {
   useEffect(() => {
     setTimeout(() => {
       const getItems = new Promise((resolve, reject) => {
-        if (categoryId == undefined) {
+        if (categoryId === undefined) {
           resolve(products);
         } else {
-          resolve(products.filter((product) => product.category == categoryId));
+          resolve(
+            products.filter((product) => product.category === categoryId)
+          );
         }
       });
       getItems.then((result) => {

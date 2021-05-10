@@ -67,13 +67,21 @@ export const Footer = () => {
         <div className="footer-social-media">
           <h3>Redes Sociales</h3>
           <div className="social-media">
-            <a href="https://www.instagram.com/" target="_blank">
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FontAwesomeIcon
                 className="social-media-icon"
                 icon={faInstagram}
               />
             </a>
-            <a href="https://www.facebook.com/" target="_blank">
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FontAwesomeIcon
                 className="social-media-icon"
                 icon={faFacebookF}
