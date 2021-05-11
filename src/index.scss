@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Abel&display=swap");
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -10,4 +12,41 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* Box-sizing y medida de rems */
+html {
+  font-size: 62.5%;
+  /* Reset para REMS - 62.5% = 10px de 16 px */
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* Variables */
+$titles-font: "Noto Sans KR", sans-serif;
+$text-font: "Abel", sans-serif;
+
+/* GENERALES */
+body {
+  user-select: none;
+}
+h1,
+h2,
+h3 {
+  font-family: $titles-font;
+}
+p {
+  font-family: $text-font;
+}
+h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  font-size: 1.5rem;
 }

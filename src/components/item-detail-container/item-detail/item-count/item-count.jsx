@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus } from "@fortawesome/free-solid-svg-icons";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const ItemCount = (props) => {
   const [stock, setStock] = useState(props.stock);
@@ -35,9 +36,17 @@ export const ItemCount = (props) => {
           onClick={(e) => stock_control(e.target.parentElement.id)}
         />
       </div>
-      <button className="item-count-button" onClick={props.onAdd}>
-        Agregar al carrito
-      </button>
+      {stock !== 0 ? (
+        <button className="item-count-button" onClick={props.onAdd}>
+          Agregar al carrito
+        </button>
+      ) : (
+        <Link to={`/cart`}>
+          <button className="item-count-button" onClick={props.onAdd}>
+            Terminar mi compra
+          </button>
+        </Link>
+      )}
     </div>
   );
 };

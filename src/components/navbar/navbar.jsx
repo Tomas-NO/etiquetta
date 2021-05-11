@@ -4,7 +4,7 @@ import { CartWidget } from "./cart-widget/cart-widget";
 import { Search } from "./search/search";
 import { User } from "./user/user";
 
-export const NavBar = () => {
+export const Navbar = () => {
   return (
     <header className="page-header">
       <div className="navbar">
