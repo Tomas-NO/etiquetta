@@ -6,6 +6,7 @@
     "description": "camisa a cuadros cuello punta botón. calce custom fit",
     "category": "camisas",
     "colors": ["azul", "negro"],
+    "sizes": ["S", "M", "L", "XL"],
     "images": [
       "../img/products/camisas/camisa1/1.jpg",
       "../img/products/camisas/camisa1/2.jpg"
@@ -19,6 +20,7 @@
     "description": "camisa lisa manga larga. corte slim fit. cuello italiano con vivo interno a tono. con cartera.",
     "category": "camisas",
     "colors": ["blanco", "celeste"],
+    "sizes": ["S", "M", "L"],
     "images": [
       "../img/products/camisas/camisa2/1.jpg",
       "../img/products/camisas/camisa2/2.jpg",
@@ -33,6 +35,7 @@
     "description": "camisa vestir estampada manga larga con tejido 100% algodón. corte slim fit. cuello noche. con cartera.",
     "category": "camisas",
     "colors": ["celeste"],
+    "sizes": ["L", "XL"],
     "images": [
       "../img/products/camisas/camisa3/1.jpg",
       "../img/products/camisas/camisa3/2.jpg",
@@ -48,6 +51,7 @@
     "description": "camisa denim con cuello punta botón. calce custom fit",
     "category": "camisas",
     "colors": ["celeste", "negro"],
+    "sizes": ["M"],
     "images": [
       "../img/products/camisas/camisa4/1.jpg",
       "../img/products/camisas/camisa4/2.jpg",
@@ -62,6 +66,7 @@
     "description": "camisa vestir de calce entallado lisa. cuenta con cuello italiano y spandex para mayor confort.",
     "category": "camisas",
     "colors": ["azul", "bordo"],
+    "sizes": ["S", "XL"],
     "images": [
       "../img/products/camisas/camisa5/1.jpg",
       "../img/products/camisas/camisa5/2.jpg"
@@ -75,6 +80,7 @@
     "description": "pantalón liso sin pinzas. corte slim fit. cierre con cremallera oculta y botón. dos bolsillos laterales y dos abotonados en la parte posterior.",
     "category": "pantalones",
     "colors": ["azul", "gris", "negro"],
+    "sizes": ["S", "M", "L", "XL"],
     "images": [
       "../img/products/pantalones/pantalon1/1.jpg",
       "../img/products/pantalones/pantalon1/2.jpg"
@@ -88,6 +94,7 @@
     "description": "pantalón liso con una pinza. corte regular. cierre con cremallera oculta y botón. dos bolsillos laterales y dos abotonados en la parte posterior.",
     "category": "pantalones",
     "colors": ["azul", "negro"],
+    "sizes": ["S", "M"],
     "images": ["../img/products/pantalones/pantalon2/1.jpg"],
     "stock": 20
   },
@@ -98,6 +105,7 @@
     "description": "pantalón liso sin pinzas. corte slim fit. cierre con cremallera oculta y botón. dos bolsillos laterales y dos abotonados en la parte posterior.",
     "category": "pantalones",
     "colors": ["azul", "gris", "negro"],
+    "sizes": ["S", "M", "L", "XL"],
     "images": [
       "../img/products/pantalones/pantalon3/1.jpg",
       "../img/products/pantalones/pantalon3/2.jpg"
@@ -111,6 +119,7 @@
     "description": "pantalón vestir slim fit liso sin pinzas cierre con cremallera oculta y botón. dos bolsillos laterales y dos abotonados en la parte posterior.",
     "category": "pantalones",
     "colors": ["negro"],
+    "sizes": ["L", "XL"],
     "images": [
       "../img/products/pantalones/pantalon4/1.jpg",
       "../img/products/pantalones/pantalon4/2.jpg"
@@ -184,6 +193,7 @@
     "description": "saco de velour con pintitas y dos botones en la parte delantera. calce slim fit. composición: 100% poliéster.",
     "category": "sacos",
     "colors": ["negro"],
+    "sizes": ["S", "L", "XL"],
     "images": [
       "../img/products/sacos/saco1/1.jpg",
       "../img/products/sacos/saco1/2.jpg"
@@ -197,6 +207,7 @@
     "description": "saco fantasía con puño de manga de cuatro botones. corte slim fit. cuello con ojal y cierre con dos botones.",
     "category": "sacos",
     "colors": ["azul"],
+    "sizes": ["S", "M", "L", "XL"],
     "images": [
       "../img/products/sacos/saco2/1.jpg",
       "../img/products/sacos/saco2/2.jpg"
@@ -210,6 +221,7 @@
     "description": "Saco de punto regular de cuatro botones. Corte Slim Fit. Cuello con ojal y cierre con dos botones. Dos bolsillos laterales con tapa y uno a la altura del pecho.",
     "category": "sacos",
     "colors": ["azul"],
+    "sizes": ["XL"],
     "images": [
       "../img/products/sacos/saco3/1.jpg",
       "../img/products/sacos/saco3/2.jpg"
@@ -223,6 +235,7 @@
     "description": "saco de corderoy con dos botones al frente. 100% algodón. calce slim fit.",
     "category": "sacos",
     "colors": ["azul", "negro"],
+    "sizes": ["M", "L", "XL"],
     "images": [
       "../img/products/sacos/saco4/1.jpg",
       "../img/products/sacos/saco4/2.jpg",
@@ -237,6 +250,7 @@
     "description": "Zapato de vestir premium de cuero con terminaciones a mano.",
     "category": "zapatos",
     "colors": ["marron"],
+    "sizes": ["38", "40", "42", "44", "46"],
     "images": [
       "../img/products/zapatos/zapato1/1.jpg",
       "../img/products/zapatos/zapato1/2.jpg",
@@ -251,6 +265,7 @@
     "description": "zapato de vestir premium de cuero con terminaciones a mano.",
     "category": "zapatos",
     "colors": ["negro"],
+    "sizes": ["38", "42", "44", "46"],
     "images": ["../img/products/zapatos/zapato2/1.jpg"],
     "stock": 10
   },
@@ -261,6 +276,7 @@
     "description": "Zapato de vestir premium de cuero en charol con terminaciones a mano.",
     "category": "zapatos",
     "colors": ["negro"],
+    "sizes": ["38", "40", "42", "44"],
     "images": ["../img/products/zapatos/zapato3/1.jpg"],
     "stock": 6
   },
@@ -271,6 +287,7 @@
     "description": "Zapato de vestir premium de cuero con terminaciones a mano.",
     "category": "zapatos",
     "colors": ["marron"],
+    "sizes": ["42", "44", "46"],
     "images": ["../img/products/zapatos/zapato4/1.jpg"],
     "stock": 5
   }

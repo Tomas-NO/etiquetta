@@ -5,9 +5,23 @@ import { Search } from "./search/search";
 import { User } from "./user/user";
 
 export const Navbar = () => {
+  function cambiar_header() {
+    let promotion_msj = document
+      .getElementById("promotion-msj")
+      .getBoundingClientRect();
+    let navbar = document.getElementById("navbar");
+    if (promotion_msj.top <= -44.4444465637207) {
+      navbar.setAttribute("class", "navbar navbar-fixed");
+    } else {
+      navbar.setAttribute("class", "navbar");
+    }
+  }
+
+  window.addEventListener("scroll", cambiar_header);
+
   return (
     <header className="page-header">
-      <div className="navbar">
+      <div className="navbar" id="navbar">
         <NavLink exact to={`/`} className="navlink">
           <img className="logo" src={"../img/logo.svg"} alt="Logo" />
         </NavLink>

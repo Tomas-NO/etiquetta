@@ -5,10 +5,10 @@ import products from "../products.json";
 
 export const Item = () => {
   const { itemId } = useParams();
-  const item = products.filter((item) => item.id === parseInt(itemId));
+  const item = products.filter((item) => item.id === parseInt(itemId))[0];
   return (
     <Page id={`item-${itemId}`}>
-      <ItemDetailContainer item={item[0]} />
+      <ItemDetailContainer item={item} />
     </Page>
   );
 };

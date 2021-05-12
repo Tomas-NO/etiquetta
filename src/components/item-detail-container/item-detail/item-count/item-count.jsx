@@ -3,19 +3,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus } from "@fortawesome/free-solid-svg-icons";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
-export const ItemCount = (props) => {
-  const [stock, setStock] = useState(props.stock);
-  const [initial, setInitial] = useState(props.initial);
+export const ItemCount = ({ stock1, initial1, onAdd }) => {
+  const [stock, setStock] = useState(parseInt(stock1));
+  const [initial, setInitial] = useState(initial1);
 
   function stock_control(id) {
     if (id === "plus-control" && stock > 0) {
-      setInitial(parseInt(initial) + 1);
-      setStock(parseInt(stock) - 1);
+      setInitial(initial + 1);
+      setStock(stock - 1);
     } else if (id === "minus-control" && initial > 0) {
-      setInitial(parseInt(initial) - 1);
-      setStock(parseInt(stock) + 1);
+      setInitial(initial - 1);
+      setStock(stock + 1);
     }
   }
 
@@ -36,16 +35,14 @@ export const ItemCount = (props) => {
           onClick={(e) => stock_control(e.target.parentElement.id)}
         />
       </div>
-      {stock !== 0 ? (
-        <button className="item-count-button" onClick={props.onAdd}>
+      {initial > 0 ? (
+        <button className="item-count-button" onClick={onAdd}>
           Agregar al carrito
         </button>
       ) : (
-        <Link to={`/cart`}>
-          <button className="item-count-button" onClick={props.onAdd}>
-            Terminar mi compra
-          </button>
-        </Link>
+        <button disabled className="item-count-button disabled">
+          Agregar al carrito
+        </button>
       )}
     </div>
   );
