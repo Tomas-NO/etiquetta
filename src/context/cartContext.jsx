@@ -7,9 +7,26 @@ export const CartProvider = ({ children }) => {
   // const [quantity, setQuantity] = useState(0);
 
   const addItem = (newItem) => {
+    console.log(newItem.id);
+    console.log(newItem);
     const quantity = parseInt(
       document.getElementById("item-count-stock").innerHTML
     );
+    const selectedColor = document.querySelector(
+      'input[name="color"]:checked'
+    ).value;
+    const selectedSize = document.querySelector(
+      'input[name="size"]:checked'
+    ).value;
+
+    let newId = `${newItem.id}${selectedColor}${selectedSize}`;
+    console.log(newId);
+
+    newItem.quantity = quantity;
+    newItem.selectedColor = selectedColor;
+    newItem.selectedSize = selectedSize;
+    newItem.id = newId;
+
     if (isInCart(newItem.id)) {
       const item = cart.filter((item) => item.id === newItem.id)[0];
       if (
@@ -21,10 +38,11 @@ export const CartProvider = ({ children }) => {
         alert("no hay suficiente stock");
       }
     } else {
-      newItem.quantity = quantity;
       setCart([...cart, newItem]);
     }
     console.log(cart);
+    newId = "";
+    console.log(newId);
   };
 
   const removeItem = (itemId) => {
@@ -38,11 +56,11 @@ export const CartProvider = ({ children }) => {
 
   const isInCart = (id) => {
     const item = cart.filter((item) => item.id === id);
-    let condicion = false;
     if (item.length > 0) {
-      condicion = true;
+      return true;
+    } else {
+      return false;
     }
-    return condicion;
   };
 
   // useEffect(() => {

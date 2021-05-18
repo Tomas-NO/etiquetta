@@ -1,0 +1,28 @@
+.cart-resume {
+  padding: 0 2rem;
+  text-align: center;
+  width: 30%;
+  .cart-resume-title {
+    font-size: 1.5rem;
+  }
+  .cart-resume-total {
+    display: flex;
+    justify-content: space-around;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  .cart-resume-buy {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 2rem 4rem;
+    font-family: inherit;
+    width: 100%;
+    transition: opacity 0.5s ease;
+  }
+  .cart-resume-buy:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}

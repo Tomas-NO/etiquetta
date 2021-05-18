@@ -5,7 +5,6 @@ import { useContext } from "react";
 
 export const ItemDetailContainer = ({ item }) => {
   const { addItem } = useContext(CartContext);
-
   return (
     <div className="item-detail-container">
       <ItemDetail

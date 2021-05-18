@@ -1,8 +1,8 @@
+import "./index.scss";
+import { CartProvider } from "./context/cartContext";
+import { Routes } from "./routes";
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.scss";
-import { Routes } from "./routes";
-import { CartProvider } from "./context/cartContext";
 
 ReactDOM.render(
   <React.StrictMode>

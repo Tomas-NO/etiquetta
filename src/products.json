@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "title": "camisa a cuadros custom fit",
     "price": 6700,
     "description": "camisa a cuadros cuello punta botón. calce custom fit",
@@ -14,7 +14,7 @@
     "stock": 5
   },
   {
-    "id": 2,
+    "id": "2",
     "title": "camisa vestir lisa slim fit",
     "price": 3800,
     "description": "camisa lisa manga larga. corte slim fit. cuello italiano con vivo interno a tono. con cartera.",
@@ -29,7 +29,7 @@
     "stock": 9
   },
   {
-    "id": 3,
+    "id": "3",
     "title": "camisa a cuadros",
     "price": 4080,
     "description": "camisa vestir estampada manga larga con tejido 100% algodón. corte slim fit. cuello noche. con cartera.",
@@ -45,7 +45,7 @@
     "stock": 3
   },
   {
-    "id": 4,
+    "id": "4",
     "title": "camisa denim custom fit",
     "price": 4670,
     "description": "camisa denim con cuello punta botón. calce custom fit",
@@ -60,7 +60,7 @@
     "stock": 15
   },
   {
-    "id": 5,
+    "id": "5",
     "title": "camisa vestir slim fit lisa",
     "price": 7000,
     "description": "camisa vestir de calce entallado lisa. cuenta con cuello italiano y spandex para mayor confort.",
@@ -74,7 +74,7 @@
     "stock": 4
   },
   {
-    "id": 6,
+    "id": "6",
     "title": "pantalón de vestir sin pinzas slim fit",
     "price": 6170,
     "description": "pantalón liso sin pinzas. corte slim fit. cierre con cremallera oculta y botón. dos bolsillos laterales y dos abotonados en la parte posterior.",
@@ -88,7 +88,7 @@
     "stock": 7
   },
   {
-    "id": 7,
+    "id": "7",
     "title": "pantalón de vestir liso regular fit",
     "price": 5400,
     "description": "pantalón liso con una pinza. corte regular. cierre con cremallera oculta y botón. dos bolsillos laterales y dos abotonados en la parte posterior.",
@@ -99,7 +99,7 @@
     "stock": 20
   },
   {
-    "id": 8,
+    "id": "8",
     "title": "pantalón de vestir liso slim fit",
     "price": 6170,
     "description": "pantalón liso sin pinzas. corte slim fit. cierre con cremallera oculta y botón. dos bolsillos laterales y dos abotonados en la parte posterior.",
@@ -113,7 +113,7 @@
     "stock": 2
   },
   {
-    "id": 9,
+    "id": "9",
     "title": "pantalón vestir slim fit",
     "price": 5520,
     "description": "pantalón vestir slim fit liso sin pinzas cierre con cremallera oculta y botón. dos bolsillos laterales y dos abotonados en la parte posterior.",
@@ -127,7 +127,7 @@
     "stock": 8
   },
   {
-    "id": 10,
+    "id": "10",
     "title": "reloj roselin",
     "price": 56000,
     "description": "reloj de 44mm de diámetro. cristal k1. resistencia 3 atm.",
@@ -137,7 +137,7 @@
     "stock": 3
   },
   {
-    "id": 11,
+    "id": "11",
     "title": "reloj lacoste",
     "price": 50200,
     "description": "reloj de 40mm de diámetro. cristal k1. resistencia 3 atm.",
@@ -147,7 +147,7 @@
     "stock": 1
   },
   {
-    "id": 12,
+    "id": "12",
     "title": "reloj movado",
     "price": 89500,
     "description": "reloj de 40mm de diámetro. cristal de zafiro. resistencia 3 atm.",
@@ -157,7 +157,7 @@
     "stock": 10
   },
   {
-    "id": 13,
+    "id": "13",
     "title": "reloj q&q superior",
     "price": 27700,
     "description": "reloj de 44mm de diámetro. cristal k1. resistencia 3 atm.",
@@ -167,7 +167,7 @@
     "stock": 7
   },
   {
-    "id": 14,
+    "id": "14",
     "title": "reloj wenger chronograph",
     "price": 70200,
     "description": "reloj de 40mm de diámetro. cristal de zafiro. resistencia 3 atm.",
@@ -177,7 +177,7 @@
     "stock": 2
   },
   {
-    "id": 15,
+    "id": "15",
     "title": "reloj lotus",
     "price": 75000,
     "description": "reloj de 40mm de diámetro. cristal de zafiro. resistencia 3 atm.",
@@ -187,7 +187,7 @@
     "stock": 4
   },
   {
-    "id": 16,
+    "id": "16",
     "title": "saco de velour slim fit",
     "price": 16600,
     "description": "saco de velour con pintitas y dos botones en la parte delantera. calce slim fit. composición: 100% poliéster.",
@@ -201,7 +201,7 @@
     "stock": 4
   },
   {
-    "id": 17,
+    "id": "17",
     "title": "saco slim fit",
     "price": 17500,
     "description": "saco fantasía con puño de manga de cuatro botones. corte slim fit. cuello con ojal y cierre con dos botones.",
@@ -215,7 +215,7 @@
     "stock": 6
   },
   {
-    "id": 18,
+    "id": "18",
     "title": "saco punto regular",
     "price": 20000,
     "description": "Saco de punto regular de cuatro botones. Corte Slim Fit. Cuello con ojal y cierre con dos botones. Dos bolsillos laterales con tapa y uno a la altura del pecho.",
@@ -229,7 +229,7 @@
     "stock": 3
   },
   {
-    "id": 19,
+    "id": "19",
     "title": "saco de corderoy slim fit",
     "price": 17000,
     "description": "saco de corderoy con dos botones al frente. 100% algodón. calce slim fit.",
@@ -244,7 +244,7 @@
     "stock": 11
   },
   {
-    "id": 20,
+    "id": "20",
     "title": "zapato hammer",
     "price": 27500,
     "description": "Zapato de vestir premium de cuero con terminaciones a mano.",
@@ -259,7 +259,7 @@
     "stock": 8
   },
   {
-    "id": 21,
+    "id": "21",
     "title": "zapato vicente",
     "price": 29500,
     "description": "zapato de vestir premium de cuero con terminaciones a mano.",
@@ -270,7 +270,7 @@
     "stock": 10
   },
   {
-    "id": 22,
+    "id": "22",
     "title": "zapato vicente charol",
     "price": 34500,
     "description": "Zapato de vestir premium de cuero en charol con terminaciones a mano.",
@@ -281,7 +281,7 @@
     "stock": 6
   },
   {
-    "id": 23,
+    "id": "23",
     "title": "zapato lowell",
     "price": 29500,
     "description": "Zapato de vestir premium de cuero con terminaciones a mano.",
