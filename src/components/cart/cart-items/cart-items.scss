@@ -14,30 +14,6 @@
       }
     }
   }
-  .cart-body {
-    .item {
-      .item-info {
-        display: flex;
-        padding: 2rem 2rem 2rem 0;
-        text-align: left;
-
-        .item-img {
-          height: 10rem;
-          margin-right: 3rem;
-        }
-        .item-title {
-          font-size: 1.5rem;
-          font-weight: normal;
-        }
-        .item-variant {
-          font-size: 1.3rem;
-        }
-      }
-      .item-number {
-        font-size: 2rem;
-      }
-    }
-  }
   .cart-footer {
     text-align: left;
     .cart-footer-link {
@@ -45,6 +21,13 @@
       font-size: 1.2rem;
     }
     .cart-footer-link:hover {
+      text-decoration: underline;
+    }
+    .cart-footer-clear {
+      text-align: center;
+      color: rgb(161, 0, 0);
+    }
+    .cart-footer-clear:hover {
       text-decoration: underline;
     }
   }

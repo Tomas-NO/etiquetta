@@ -1,11 +1,16 @@
-export const ItemSizes = ({ sizes }) => {
+export const ItemSizes = ({ sizes, changeSelectedSize }) => {
   return (
     <div className="item-variant">
       <h4>Talles:</h4>
       <div className="item-variant-selection">
         {sizes.map((size, i = 0) => (
           <label className="item-option" key={i}>
-            <input type="radio" name="size" value={size} />
+            <input
+              type="radio"
+              name="size"
+              value={size}
+              onChange={changeSelectedSize}
+            />
             <span className="item-option-checkmark">{size}</span>
           </label>
         ))}

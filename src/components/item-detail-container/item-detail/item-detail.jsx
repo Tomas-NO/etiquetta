@@ -12,6 +12,11 @@ export const ItemDetail = ({
   colors,
   stock,
   sizes,
+  changeSelectedQuantity,
+  selectedColor,
+  changeSelectedColor,
+  selectedSize,
+  changeSelectedSize,
   onAdd,
 }) => {
   return (
@@ -21,9 +26,16 @@ export const ItemDetail = ({
         <h3 className="item-title">{title}</h3>
         <p className="item-description">{description}</p>
         <p className="item-price">${price}</p>
-        <ItemColors colors={colors} />
-        {sizes ? <ItemSizes sizes={sizes} /> : console.log("No hay talles")}
-        <ItemCount stock1={stock} initial1={0} onAdd={onAdd} />
+        <ItemColors colors={colors} changeSelectedColor={changeSelectedColor} />
+        <ItemSizes sizes={sizes} changeSelectedSize={changeSelectedSize} />
+        <ItemCount
+          stock={stock}
+          initial={0}
+          onAdd={onAdd}
+          changeSelectedQuantity={changeSelectedQuantity}
+          selectedColor={selectedColor}
+          selectedSize={selectedSize}
+        />
       </div>
     </div>
   );

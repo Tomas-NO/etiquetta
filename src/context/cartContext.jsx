@@ -1,30 +1,17 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  // const [quantity, setQuantity] = useState(0);
+  const [cartQuantity, setCartQuantity] = useState(0);
 
-  const addItem = (newItem) => {
-    console.log(newItem.id);
-    console.log(newItem);
-    const quantity = parseInt(
-      document.getElementById("item-count-stock").innerHTML
-    );
-    const selectedColor = document.querySelector(
-      'input[name="color"]:checked'
-    ).value;
-    const selectedSize = document.querySelector(
-      'input[name="size"]:checked'
-    ).value;
-
-    let newId = `${newItem.id}${selectedColor}${selectedSize}`;
-    console.log(newId);
+  const addItem = (newItem, quantity, color, size) => {
+    const newId = `${newItem.id}${color}${size}`;
 
     newItem.quantity = quantity;
-    newItem.selectedColor = selectedColor;
-    newItem.selectedSize = selectedSize;
+    newItem.selectedColor = color;
+    newItem.selectedSize = size;
     newItem.id = newId;
 
     if (isInCart(newItem.id)) {
@@ -35,22 +22,21 @@ export const CartProvider = ({ children }) => {
       ) {
         item.quantity += quantity;
       } else {
+        // toDo mostrar una alerta con estilos
         alert("no hay suficiente stock");
       }
     } else {
       setCart([...cart, newItem]);
     }
-    console.log(cart);
-    newId = "";
-    console.log(newId);
   };
 
-  const removeItem = (itemId) => {
+  const removeItem = (evt) => {
+    const itemId = evt.target.parentElement.parentElement.id;
     const newCart = cart.filter((item) => item.id !== itemId);
-    setCart([newCart]);
+    setCart(newCart);
   };
 
-  const clear = () => {
+  const clearCart = () => {
     setCart([]);
   };
 
@@ -63,13 +49,16 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  // useEffect(() => {
-  //   setQuantity(cart.length);
-  //   console.log(cart);
-  // }, [cart]);
+  useEffect(() => {
+    let totalQuantity = 0;
+    cart.forEach((item) => (totalQuantity += item.quantity));
+    setCartQuantity(totalQuantity);
+  }, [cart]);
 
   return (
-    <CartContext.Provider value={{ cart, addItem, removeItem, clear }}>
+    <CartContext.Provider
+      value={{ cart, cartQuantity, addItem, removeItem, clearCart }}
+    >
       {children}
     </CartContext.Provider>
   );
