@@ -4,12 +4,34 @@
   width: 30%;
   .cart-resume-title {
     font-size: 1.5rem;
+    margin-top: 0;
+  }
+  .cart-resume-input {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 1.8rem;
   }
   .cart-resume-total {
     display: flex;
     justify-content: space-around;
     font-size: 3rem;
     font-weight: bold;
+    width: 100%;
+    margin-bottom: 2rem;
+    label {
+      width: 30%;
+    }
+    .cart-resume-total-number {
+      border: none;
+      background-color: transparent;
+      font-size: 3rem;
+      font-weight: bold;
+      color: black;
+      width: 70%;
+      text-align: right;
+    }
   }
   .cart-resume-buy {
     background-color: #000;

@@ -1,6 +1,4 @@
-import colorsList from "../../../../colors.json";
-
-export const ItemColors = ({ colors, changeSelectedColor }) => {
+export const ItemColors = ({ colors, colorsList, setSelectedColor }) => {
   return (
     <div className="item-variant">
       <h4>Colores:</h4>
@@ -11,7 +9,7 @@ export const ItemColors = ({ colors, changeSelectedColor }) => {
               type="radio"
               name="color"
               value={color}
-              onChange={changeSelectedColor}
+              onChange={(e) => setSelectedColor(e.target.value)}
             />
             <span
               className="item-option-checkmark"

@@ -8,6 +8,7 @@ export const Item = () => {
   const { itemId } = useParams();
 
   const [item, setItem] = useState([]);
+  const [colorsList, setColorsList] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -23,12 +24,24 @@ export const Item = () => {
       .catch((error) => console.error("Firestore error:", error));
   }, [itemId]);
 
+  useEffect(() => {
+    const db = getFirestore();
+    const itemCollection = db.collection("colors");
+    itemCollection
+      .get()
+      .then((querySnapshot) => {
+        const data = querySnapshot.docs.map((doc) => doc.data())[0];
+        setColorsList(data);
+      })
+      .catch((error) => console.error("Firestore error:", error));
+  }, []);
+
   return (
     <Page id={`item-${itemId}`}>
       {loading ? (
         <p>No existe este item</p>
       ) : (
-        <ItemDetailContainer item={item} />
+        <ItemDetailContainer item={item} colorsList={colorsList} />
       )}
     </Page>
   );

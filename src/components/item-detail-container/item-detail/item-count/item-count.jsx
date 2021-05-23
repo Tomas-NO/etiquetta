@@ -3,30 +3,27 @@ import { faMinus } from "@fortawesome/free-solid-svg-icons";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 export const ItemCount = ({
   stock,
-  initial,
   onAdd,
-  changeSelectedQuantity,
+  setSelectedQuantity,
+  selectedQuantity,
   selectedColor,
   selectedSize,
 }) => {
-  const [remainingStock, setRemainingStock] = useState(stock);
-  const [selectedStock, setSelectedStock] = useState(initial);
-
   function stock_control(evt) {
     const id = evt.target.parentNode.id;
-    if (id === "plus-control" && remainingStock > 0) {
-      setSelectedStock(selectedStock + 1);
-      setRemainingStock(remainingStock - 1);
-    } else if (id === "minus-control" && selectedStock > 0) {
-      setSelectedStock(selectedStock - 1);
-      setRemainingStock(remainingStock + 1);
+
+    if (id === "plus-control" && selectedQuantity < stock) {
+      setSelectedQuantity(selectedQuantity + 1);
+    } else if (
+      id === "minus-control" &&
+      0 < selectedQuantity &&
+      selectedQuantity <= stock
+    ) {
+      setSelectedQuantity(selectedQuantity - 1);
     }
-    // toDo Cambiar esta forma de setear el stock
-    changeSelectedQuantity(selectedStock + 1);
   }
 
   return (
@@ -42,8 +39,8 @@ export const ItemCount = ({
           type="number"
           className="item-count-stock"
           id="item-count-stock"
-          value={selectedStock}
-          placeholder={selectedStock}
+          value={selectedQuantity}
+          placeholder={selectedQuantity}
           disabled
         />
         <FontAwesomeIcon
@@ -53,7 +50,7 @@ export const ItemCount = ({
           onClick={stock_control}
         />
       </div>
-      {selectedStock > 0 && selectedColor && selectedSize ? (
+      {selectedQuantity > 0 && selectedColor && selectedSize ? (
         <Link to="/cart">
           <button className="item-count-button" onClick={onAdd}>
             Agregar al carrito

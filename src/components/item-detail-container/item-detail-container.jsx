@@ -3,37 +3,30 @@ import { CartContext } from "../../context/cartContext";
 import { ItemDetail } from "./item-detail/item-detail";
 import { useContext, useState } from "react";
 
-export const ItemDetailContainer = ({ item }) => {
+export const ItemDetailContainer = ({ item, colorsList }) => {
   const { addItem } = useContext(CartContext);
   const [selectedColor, setSelectedColor] = useState();
   const [selectedSize, setSelectedSize] = useState();
   const [selectedQuantity, setSelectedQuantity] = useState(0);
 
-  function changeSelectedQuantity(evt) {
-    setSelectedQuantity(evt);
-  }
-  function changeSelectedColor(evt) {
-    setSelectedColor(evt.target.value);
-  }
-  function changeSelectedSize(evt) {
-    setSelectedSize(evt.target.value);
-  }
-
   return (
     <div className="item-detail-container">
       <ItemDetail
+        category={item.category}
         images={item.images}
         title={item.title}
         description={item.description}
         price={item.price}
         colors={item.colors}
+        colorsList={colorsList}
         stock={item.stock}
         sizes={item.sizes}
-        changeSelectedQuantity={changeSelectedQuantity}
+        selectedQuantity={selectedQuantity}
+        setSelectedQuantity={setSelectedQuantity}
         selectedColor={selectedColor}
-        changeSelectedColor={changeSelectedColor}
+        setSelectedColor={setSelectedColor}
         selectedSize={selectedSize}
-        changeSelectedSize={changeSelectedSize}
+        setSelectedSize={setSelectedSize}
         onAdd={() =>
           addItem(item, selectedQuantity, selectedColor, selectedSize)
         }

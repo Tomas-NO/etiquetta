@@ -5,18 +5,21 @@ import { ItemDetailImages } from "./item-detail-images/item-detail-images";
 import { ItemSizes } from "./item-sizes/item-sizes";
 
 export const ItemDetail = ({
+  category,
   images,
   title,
   description,
   price,
   colors,
+  colorsList,
   stock,
   sizes,
-  changeSelectedQuantity,
+  selectedQuantity,
+  setSelectedQuantity,
   selectedColor,
-  changeSelectedColor,
+  setSelectedColor,
   selectedSize,
-  changeSelectedSize,
+  setSelectedSize,
   onAdd,
 }) => {
   return (
@@ -26,13 +29,21 @@ export const ItemDetail = ({
         <h3 className="item-title">{title}</h3>
         <p className="item-description">{description}</p>
         <p className="item-price">${price}</p>
-        <ItemColors colors={colors} changeSelectedColor={changeSelectedColor} />
-        <ItemSizes sizes={sizes} changeSelectedSize={changeSelectedSize} />
+        <ItemColors
+          colors={colors}
+          colorsList={colorsList}
+          setSelectedColor={setSelectedColor}
+        />
+        <ItemSizes
+          category={category}
+          sizes={sizes}
+          setSelectedSize={setSelectedSize}
+        />
         <ItemCount
           stock={stock}
-          initial={0}
           onAdd={onAdd}
-          changeSelectedQuantity={changeSelectedQuantity}
+          setSelectedQuantity={setSelectedQuantity}
+          selectedQuantity={selectedQuantity}
           selectedColor={selectedColor}
           selectedSize={selectedSize}
         />

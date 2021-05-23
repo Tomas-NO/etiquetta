@@ -1,19 +1,19 @@
-import { Link } from "react-router-dom";
 import "./cart-container.scss";
 import { CartItems } from "./cart-items/cart-items";
 import { CartResume } from "./cart-resume/cart-resume";
+import { Link } from "react-router-dom";
 
 export const CartContainer = ({
   items,
   cartQuantity,
   removeItem,
   clearCart,
+  setName,
+  setPhone,
+  setEmail,
+  total,
+  buyItems,
 }) => {
-  let total = 0;
-  items.forEach((item) => {
-    total += item.quantity * item.price;
-  });
-
   return (
     <div>
       {cartQuantity > 0 ? (
@@ -23,7 +23,13 @@ export const CartContainer = ({
             removeItem={removeItem}
             clearCart={clearCart}
           />
-          <CartResume total={total} />
+          <CartResume
+            setName={setName}
+            setPhone={setPhone}
+            setEmail={setEmail}
+            total={total}
+            buyItems={buyItems}
+          />
         </div>
       ) : (
         <div className="empty-cart">
