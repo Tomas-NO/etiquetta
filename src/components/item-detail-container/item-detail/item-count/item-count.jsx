@@ -3,6 +3,7 @@ import { faMinus } from "@fortawesome/free-solid-svg-icons";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import swal from "sweetalert";
 
 export const ItemCount = ({
   stock,
@@ -19,11 +20,14 @@ export const ItemCount = ({
       setSelectedQuantity(selectedQuantity + 1);
     } else if (
       id === "minus-control" &&
-      0 < selectedQuantity &&
+      1 < selectedQuantity &&
       selectedQuantity <= stock
     ) {
       setSelectedQuantity(selectedQuantity - 1);
     }
+  }
+  function showAlert() {
+    swal("Ocurrió un error", "Debes seleccionar un color y un tamaño", "error");
   }
 
   return (
@@ -50,14 +54,14 @@ export const ItemCount = ({
           onClick={stock_control}
         />
       </div>
-      {selectedQuantity > 0 && selectedColor && selectedSize ? (
+      {selectedColor && selectedSize ? (
         <Link to="/cart">
           <button className="item-count-button" onClick={onAdd}>
             Agregar al carrito
           </button>
         </Link>
       ) : (
-        <button disabled className="item-count-button disabled">
+        <button className="item-count-button" onClick={showAlert}>
           Agregar al carrito
         </button>
       )}

@@ -1,9 +1,32 @@
 import "./footer.scss";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { getFirestore } from "../../firebase";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import swal from "sweetalert";
 
 export const Footer = () => {
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+
+  function addUserNewsletter(e) {
+    e.preventDefault();
+    if (name && email) {
+      const db = getFirestore();
+      db.collection("newsletter")
+        .add({
+          user: {
+            name,
+            email,
+          },
+        })
+        .then(swal("Éxito", "Usted se ha suscripto al newsletter", "success"));
+    } else {
+      swal("Ocurrió un error", "Debes completar todos los campos", "error");
+    }
+  }
+
   return (
     <footer className="footer">
       <div className="newsletter">
@@ -17,13 +40,19 @@ export const Footer = () => {
             className="newsletter-form-input"
             type="text"
             placeholder="Tu Nombre"
+            onChange={(e) => setName(e.target.value)}
           />
           <input
             className="newsletter-form-input"
             type="email"
             placeholder="Tu Email"
+            onChange={(e) => setEmail(e.target.value)}
           />
-          <button className="newsletter-form-button" type="submit">
+          <button
+            className="newsletter-form-button"
+            type="submit"
+            onClick={addUserNewsletter}
+          >
             Suscribite
           </button>
         </form>

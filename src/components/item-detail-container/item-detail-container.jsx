@@ -7,7 +7,7 @@ export const ItemDetailContainer = ({ item, colorsList }) => {
   const { addItem } = useContext(CartContext);
   const [selectedColor, setSelectedColor] = useState();
   const [selectedSize, setSelectedSize] = useState();
-  const [selectedQuantity, setSelectedQuantity] = useState(0);
+  const [selectedQuantity, setSelectedQuantity] = useState(1);
 
   return (
     <div className="item-detail-container">

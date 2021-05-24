@@ -3,6 +3,7 @@ import { CartContext } from "../context/cartContext";
 import { getFirestore } from "../firebase";
 import { Page } from "../components/page/page";
 import { useContext, useState } from "react";
+import swal from "sweetalert";
 
 export const Cart = () => {
   const { cart, cartQuantity, removeItem, clearCart } = useContext(CartContext);
@@ -39,9 +40,15 @@ export const Cart = () => {
           total,
         })
         .then(({ id }) => {
-          console.log(id);
+          swal({
+            title: "Exito",
+            text: `Su compra se procesó con el identificador: ${id}`,
+            icon: "success",
+          });
         })
         .then(clearCart);
+    } else {
+      swal("Ocurrió un error", "Debes completar todos los campos", "error");
     }
   }
 
