@@ -17,9 +17,21 @@ export const Cart = () => {
 
   function buyItems(e) {
     e.preventDefault();
+    const db = getFirestore();
+
+    const batch = db.batch();
+
+    cart.forEach((item) => {
+      const itemRef = db.collection("items").doc(item.previousId);
+      batch.update(itemRef, { stock: item.stock - item.quantity });
+    });
+
+    batch.commit().then((r) => console.log(r));
+
     if (name && phone && email) {
       cart.forEach((item) => {
-        delete item.category &&
+        delete item.previousId &&
+          delete item.category &&
           delete item.colors &&
           delete item.description &&
           delete item.images &&
@@ -27,7 +39,6 @@ export const Cart = () => {
           delete item.stock;
       });
 
-      const db = getFirestore();
       db.collection("orders")
         .add({
           buyer: {

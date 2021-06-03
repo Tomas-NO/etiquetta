@@ -62,7 +62,7 @@ export const Footer = () => {
           <h3>Navegación</h3>
           <ul className="footer-links-list">
             <li className="footer-links-link">
-              <Link exact to={`/productos`} className="footer-link">
+              <Link to={`/productos`} className="footer-link">
                 Productos
               </Link>
             </li>

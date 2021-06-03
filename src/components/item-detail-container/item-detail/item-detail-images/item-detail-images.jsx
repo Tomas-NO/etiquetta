@@ -9,13 +9,13 @@ export const ItemDetailImages = ({ images }) => {
   return (
     <div className="item-detail-images">
       <div className="item-detail-images-selection">
-        {images.map((image, i = 0) => (
+        {images.map((image, key) => (
           <img
             src={image}
             alt="item-img"
             className="image-option"
-            id={i}
-            key={i}
+            id={key}
+            key={key}
             onClick={change_image}
           />
         ))}

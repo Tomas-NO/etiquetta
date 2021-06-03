@@ -12,6 +12,7 @@ export const CartProvider = ({ children }) => {
     newItem.quantity = quantity;
     newItem.selectedColor = color;
     newItem.selectedSize = size;
+    newItem.previousId = newItem.id;
     newItem.id = newId;
 
     if (isInCart(newItem.id)) {

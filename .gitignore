@@ -18,8 +18,8 @@
 .env.test.local
 .env.production.local
 .env
-/src/products.json
-/src/colors.json
+src\colors.json
+src\products.json
 
 npm-debug.log*
 yarn-debug.log*

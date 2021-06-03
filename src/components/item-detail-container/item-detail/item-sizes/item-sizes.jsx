@@ -3,8 +3,8 @@ export const ItemSizes = ({ category, sizes, setSelectedSize }) => {
     <div className="item-variant">
       {category === "relojes" ? <h4>Diametro en mm:</h4> : <h4>Talles:</h4>}
       <div className="item-variant-selection">
-        {sizes.map((size, i = 0) => (
-          <label className="item-option" key={i}>
+        {sizes.map((size, key) => (
+          <label className="item-option" key={key}>
             <input
               type="radio"
               name="size"

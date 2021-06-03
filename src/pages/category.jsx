@@ -1,18 +1,28 @@
-import { getFirestore } from "../firebase";
+import { getFirestore, getStorage } from "../firebase";
 import { ItemListContainer } from "../components/item-list-container/item-list-container";
+import { LoadingScreen } from "../components/loadingScreen/loadingScreen";
 import { Page } from "../components/page/page";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 
-// import productos from "../products.json";
-
 export const Category = () => {
-  const { categoryId } = useParams();
+  let { categoryId } = useParams();
 
-  const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [items, setItems] = useState([]);
+  const [categoryImg, setCategoryImg] = useState("");
 
   useEffect(() => {
+    setLoading(true);
+    const storage = getStorage();
+    const storageRef = storage.ref();
+    storageRef
+      .child(`categories/${categoryId ? categoryId : "productos"}.jpg`)
+      .getDownloadURL()
+      .then(function (url) {
+        setCategoryImg(url);
+      });
+
     const db = getFirestore();
     let itemCollection = db.collection("items");
     if (categoryId !== undefined) {
@@ -28,20 +38,17 @@ export const Category = () => {
           ...doc.data(),
         }));
         setItems(data);
-        setLoading(false);
       })
       .catch((error) => console.error("Firestore error:", error));
+    setTimeout(() => setLoading(false), 1000);
   }, [categoryId]);
 
   return (
     <Page id={`category-${categoryId ? categoryId : "productos"}`}>
       {loading ? (
-        <p>Esta categoria actualmente no tiene productos</p>
+        <LoadingScreen />
       ) : (
-        <ItemListContainer
-          items={items}
-          categoryId={categoryId ? categoryId : "productos"}
-        />
+        <ItemListContainer items={items} categoryImg={categoryImg} />
       )}
     </Page>
   );

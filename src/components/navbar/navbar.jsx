@@ -1,11 +1,10 @@
 import "./navbar.scss";
-import { NavLink } from "react-router-dom";
 import { CartWidget } from "./cart-widget/cart-widget";
-import { Search } from "./search/search";
-import { User } from "./user/user";
+import { HeaderLink } from "./header-link/header-link";
+import { NavLink } from "react-router-dom";
 
 export const Navbar = () => {
-  function cambiar_header() {
+  function change_header() {
     let promotion_msj = document
       .getElementById("promotion-msj")
       .getBoundingClientRect();
@@ -17,7 +16,7 @@ export const Navbar = () => {
     }
   }
 
-  window.addEventListener("scroll", cambiar_header);
+  window.addEventListener("scroll", change_header);
 
   return (
     <header className="page-header">
@@ -27,74 +26,19 @@ export const Navbar = () => {
         </NavLink>
         <nav className="links">
           <ul className="links-list">
-            <li className="links-link">
-              <NavLink
-                exact
-                to={`/productos`}
-                className="navlink"
-                activeClassName="active-navlink"
-              >
-                Productos
-              </NavLink>
-            </li>
-            <li className="links-link">
-              <NavLink
-                to={`/productos/camisas`}
-                className="navlink"
-                activeClassName="active-navlink"
-              >
-                Camisas
-              </NavLink>
-            </li>
-            <li className="links-link">
-              <NavLink
-                to={`/productos/sacos`}
-                className="navlink"
-                activeClassName="active-navlink"
-              >
-                Sacos
-              </NavLink>
-            </li>
-            <li className="links-link">
-              <NavLink
-                to={`/productos/pantalones`}
-                className="navlink"
-                activeClassName="active-navlink"
-              >
-                Pantalones
-              </NavLink>
-            </li>
-            <li className="links-link">
-              <NavLink
-                to={`/productos/zapatos`}
-                className="navlink"
-                activeClassName="active-navlink"
-              >
-                Zapatos
-              </NavLink>
-            </li>
-            <li className="links-link">
-              <NavLink
-                to={`/productos/relojes`}
-                className="navlink"
-                activeClassName="active-navlink"
-              >
-                Relojes
-              </NavLink>
-            </li>
+            <HeaderLink direction={"/productos"}>Productos</HeaderLink>
+            <HeaderLink direction={"/productos/camisas"}>Camisas</HeaderLink>
+            <HeaderLink direction={"/productos/sacos"}>Sacos</HeaderLink>
+            <HeaderLink direction={"/productos/pantalones"}>
+              Pantalones
+            </HeaderLink>
+            <HeaderLink direction={"/productos/zapatos"}>Zapatos</HeaderLink>
+            <HeaderLink direction={"/productos/relojes"}>Relojes</HeaderLink>
+            <HeaderLink direction={"/cart"}>
+              <CartWidget />
+            </HeaderLink>
           </ul>
         </nav>
-        <div className="right">
-          <div className="header-icon">
-            <Search />
-          </div>
-          <div className="header-icon">
-            <User />
-          </div>
-          <div className="header-icon">
-            <CartWidget />
-          </div>
-        </div>
       </div>
     </header>
   );

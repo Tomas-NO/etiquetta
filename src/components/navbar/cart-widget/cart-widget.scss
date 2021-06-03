@@ -1,5 +1,6 @@
 .header-cart {
   position: relative;
+  transition: opacity 0.5s ease;
   .header-cart-quantity {
     position: absolute;
     top: -1.5rem;
@@ -7,5 +8,9 @@
     color: rgb(161, 0, 0);
     font-size: 1.5rem;
     font-weight: bold;
+    letter-spacing: 0;
   }
+}
+.header-cart:hover {
+  opacity: 0.6;
 }
