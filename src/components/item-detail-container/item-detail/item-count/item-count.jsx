@@ -27,7 +27,15 @@ export const ItemCount = ({
     }
   }
   function showAlert() {
-    swal("Ocurrió un error", "Debes seleccionar un color y un tamaño", "error");
+    if (stock < 1) {
+      swal("Ocurrió un error", "No hay mas stock de este producto", "error");
+    } else if (!selectedColor || !selectedSize) {
+      swal(
+        "Ocurrió un error",
+        "Debes seleccionar un color y un tamaño",
+        "error"
+      );
+    }
   }
 
   return (
@@ -54,7 +62,8 @@ export const ItemCount = ({
           onClick={stock_control}
         />
       </div>
-      {selectedColor && selectedSize ? (
+      <p>STOCK RESTANTE: {stock}</p>
+      {selectedColor && selectedSize && stock > 0 ? (
         <Link to="/cart">
           <button className="item-count-button" onClick={onAdd}>
             Agregar al carrito

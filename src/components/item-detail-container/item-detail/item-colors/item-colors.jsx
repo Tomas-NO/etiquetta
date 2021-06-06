@@ -14,7 +14,9 @@ export const ItemColors = ({ colors, colorsList, setSelectedColor }) => {
             <span
               className="item-option-checkmark"
               style={{
-                backgroundColor: colorsList[color],
+                backgroundColor: colorsList.filter(
+                  (listColor) => listColor.id === color
+                )[0].codigo,
               }}
             ></span>
           </label>

@@ -3,7 +3,7 @@ import { CartContext } from "../../context/cartContext";
 import { ItemDetail } from "./item-detail/item-detail";
 import { useContext, useState } from "react";
 
-export const ItemDetailContainer = ({ item, colorsList }) => {
+export const ItemDetailContainer = ({ item, colorsList, itemCartQuantity }) => {
   const { addItem } = useContext(CartContext);
   const [selectedColor, setSelectedColor] = useState();
   const [selectedSize, setSelectedSize] = useState();
@@ -19,7 +19,7 @@ export const ItemDetailContainer = ({ item, colorsList }) => {
         price={item.price}
         colors={item.colors}
         colorsList={colorsList}
-        stock={item.stock}
+        stock={item.stock - itemCartQuantity}
         sizes={item.sizes}
         selectedQuantity={selectedQuantity}
         setSelectedQuantity={setSelectedQuantity}
