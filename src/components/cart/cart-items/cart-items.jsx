@@ -31,8 +31,8 @@ export const CartItems = ({ items, removeItem, clearCart }) => {
         </tr>
       </tfoot>
       <tbody className="cart-body">
-        {items.map((item) => (
-          <CartItem item={item} removeItem={removeItem} />
+        {items.map((item, key) => (
+          <CartItem key={key} item={item} removeItem={removeItem} />
         ))}
       </tbody>
     </table>

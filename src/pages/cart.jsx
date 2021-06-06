@@ -1,6 +1,6 @@
 import { CartContainer } from "../components/cart/cart-container";
 import { CartContext } from "../context/cartContext";
-import { getFirestore } from "../firebase";
+import { getFirestore } from "../firebase/index";
 import { Page } from "../components/page/page";
 import { useContext, useState } from "react";
 import swal from "sweetalert";

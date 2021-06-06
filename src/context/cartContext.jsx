@@ -17,15 +17,10 @@ export const CartProvider = ({ children }) => {
 
     if (isInCart(newItem.id)) {
       const item = cart.filter((item) => item.id === newItem.id)[0];
-      if (
-        item.quantity < item.stock &&
-        item.stock - item.quantity >= quantity
-      ) {
-        item.quantity += quantity;
-      } else {
-        // toDo mostrar una alerta con estilos
-        alert("no hay suficiente stock");
-      }
+      item.quantity += quantity;
+      let totalQuantity = 0;
+      cart.forEach((item) => (totalQuantity += item.quantity));
+      setCartQuantity(totalQuantity);
     } else {
       setCart([...cart, newItem]);
     }
